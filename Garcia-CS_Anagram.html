@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anagram</title>
+</head>
+<body>
+		<script>
+			function anagram(input1, input2) {
+            
+				var first = input1.replaceAll(" ", "").toLowerCase().split("").sort().join("");
+				var second = input2.replaceAll(" ", "").toLowerCase().split("").sort().join("");
+				return first === second;
+			}
+
+        
+			var word1 = prompt("Please enter the first word/phrase:");
+			var word2 = prompt("Please enter the second word/phrase:");
+
+        
+			var result = anagram(word1, word2);
+
+        
+			if (result) {
+				alert("The words/s" + "'" + word1 + "' and '" + word2 + "'" + "that were entered are anagrams.");
+			} else {
+				alert("The words/s" + "'" + word1 + "' and '" + word2 + "'" + "that were entered are not anagrams.");
+			}
+		</script>
+	</body>
+</html>
